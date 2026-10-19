@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gestión de notas | Universidad JPO</title>
+	<link rel="stylesheet" href="css/profesor.css">
+</head>
+<body>
+	<header class="encabezado">
+		<h1>Gestión de notas</h1>
+		<nav class="menu-superior" aria-label="Navegación principal">
+			<a href="index.html">Inicio</a>
+			<button type="button" id="cerrar-sesion">Cerrar sesión</button>
+		</nav>
+	</header>
+
+	<main class="contenedor-profesor">
+		<p class="bienvenida">Bienvenido, profesor.</p>
+
+		<section aria-labelledby="titulo-formulario">
+			<h2 id="titulo-formulario">Agregar una nota</h2>
+			<form id="formulario-nota">
+				<div class="campo-formulario">
+					<label for="nombreEstudiante">Nombre del estudiante</label>
+					<input type="text" id="nombreEstudiante" name="nombreEstudiante" required>
+				</div>
+
+				<div class="campo-formulario">
+					<label for="asignatura">Asignatura</label>
+					<input type="text" id="asignatura" name="asignatura" required>
+				</div>
+
+				<div class="campo-formulario">
+					<label for="calificacion">Calificación</label>
+					<input type="number" id="calificacion" name="calificacion" required>
+				</div>
+
+				<button type="submit">Guardar nota</button>
+			</form>
+		</section>
+
+		<section aria-labelledby="titulo-lista-notas">
+			<h2 id="titulo-lista-notas">Notas registradas</h2>
+			<p id="mensaje-notas"></p>
+			<div class="contenedor-tabla">
+				<table>
+					<thead>
+						<tr>
+							<th scope="col">Estudiante</th>
+							<th scope="col">Asignatura</th>
+							<th scope="col">Calificación</th>
+							<th scope="col">Acciones</th>
+						</tr>
+					</thead>
+					<tbody id="lista-notas"></tbody>
+				</table>
+			</div>
+		</section>
+	</main>
+	<script src="js/profesor.js"></script>
+</body>
+</html>
